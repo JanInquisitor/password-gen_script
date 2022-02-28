@@ -41,7 +41,9 @@ function getProperties() {
   // This stops the program if the user click 'cancel'.
   if (properties.length === null) return false;
 
-  if (typeof properties.length === "string") {
+  properties.length = properties.length * 1;
+
+  if (typeof properties.length === "string" || properties.length === NaN) {
     alert("Must enter a number");
     return false;
   }
@@ -62,7 +64,7 @@ function getProperties() {
   properties.numbers = confirm(
     "Would you like the password to contain numbers?"
   );
-
+  console.log(properties);
   return properties;
 }
 

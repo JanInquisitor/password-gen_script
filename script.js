@@ -64,7 +64,6 @@ function getProperties() {
   properties.numbers = confirm(
     "Would you like the password to contain numbers?"
   );
-  console.log(properties);
   return properties;
 }
 
